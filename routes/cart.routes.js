@@ -4,8 +4,8 @@ const cartController = require("../controllers/cart.controller");
 module.exports = function(app){
     app.post("/ecomm/api/v1/carts",[authjwt.verifyToken],cartController.create);
     
-    // app.put("ecomm/api/v1/crts/:id",[authjwt.verifyToken],cartController.update);
+    app.put("ecomm/api/v1/crts/:id",[authjwt.verifyToken],cartController.update);
 
-    // app.get("ecomm/api/v1/carts/:cartId",[authjwt.verifyToken],cartController.getCart);
+    app.get("ecomm/api/v1/carts/:cartId",[authjwt.verifyToken],cartController.getCart);
 
 }
